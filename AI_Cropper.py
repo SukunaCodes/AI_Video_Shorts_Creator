@@ -3,13 +3,16 @@ import subprocess
 import openai
 import json
 import math
+import os
 import cv2
-import pdb
+from dotenv import load_dotenv
 import numpy as np
 
 from youtube_transcript_api import YouTubeTranscriptApi
 
-openai.api_key = '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'
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 # Download YouTube Video function
